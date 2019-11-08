@@ -1,9 +1,28 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorGray</item>
+        <item name="android:windowBackground">@color/colorLight</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="TitleTextView">
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="BodyTextView">
+        <item name="android:textSize">@dimen/body_text_size</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorGray</item>
+        <item name="colorControlActivated">@color/colorRating</item>
     </style>
 
 </resources>
