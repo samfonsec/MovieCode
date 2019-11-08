@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".view.activities.MovieDetailActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:fitsSystemWindows="true"
+                android:visibility="invisible"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/appbarImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="fitXY"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    app:layout_collapseMode="pin"
+                    app:layout_collapseParallaxMultiplier="0.7"
+                    tools:ignore="ContentDescription" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/size_default">
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:isIndicator="true"
+                    android:theme="@style/RatingBar"
+                    android:translationZ="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/ratingTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_default"
+                    android:textSize="@dimen/title_text_size"
+                    android:translationZ="2dp"
+                    app:layout_constraintBottom_toBottomOf="@id/ratingBar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@id/ratingBar"
+                    app:layout_constraintTop_toTopOf="@id/ratingBar"
+                    tools:text="4.5" />
+
+                <TextView
+                    android:id="@+id/tvReleaseDate"
+                    style="@style/BodyTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_default"
+                    android:drawableStart="@drawable/ic_date_accent_24"
+                    android:drawablePadding="@dimen/size_default"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/size_small"
+                    android:paddingBottom="@dimen/size_small"
+                    app:layout_constraintTop_toBottomOf="@id/ratingBar"
+                    tools:text="2019-12-31" />
+
+                <TextView
+                    android:id="@+id/tvGenresTitle"
+                    style="@style/TitleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_default"
+                    android:text="@string/act_movie_detail_genres"
+                    app:layout_constraintTop_toBottomOf="@id/tvReleaseDate"
+                    tools:layout_editor_absoluteX="16dp" />
+
+                <TextView
+                    android:id="@+id/tvGenresBody"
+                    style="@style/BodyTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_small"
+                    android:textSize="@dimen/body_text_size"
+                    app:layout_constraintTop_toBottomOf="@id/tvGenresTitle"
+                    tools:text="Ação, Terror, Comédia" />
+
+                <TextView
+                    android:id="@+id/tvOverviewTitle"
+                    style="@style/TitleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_default"
+                    android:text="@string/act_movie_detail_overview"
+                    app:layout_constraintTop_toBottomOf="@id/tvGenresBody" />
+
+                <TextView
+                    android:id="@+id/tvOverviewBody"
+                    style="@style/BodyTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_default"
+                    app:layout_constraintTop_toBottomOf="@id/tvOverviewTitle" />
+
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

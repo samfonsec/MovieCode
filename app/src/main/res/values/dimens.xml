@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="size_extra_small">4dp</dimen>
+    <dimen name="size_small">8dp</dimen>
+    <dimen name="size_default">16dp</dimen>
+    <dimen name="size_medium">24dp</dimen>
+    <dimen name="size_big">32dp</dimen>
+
+    <dimen name="title_text_size">24sp</dimen>
+    <dimen name="body_text_size">16sp</dimen>
+
+    <dimen name="item_title_text_size">16sp</dimen>
+    <dimen name="item_body_text_size">14sp</dimen>
+    <dimen name="item_sub_text_size">12sp</dimen>
+
+</resources>

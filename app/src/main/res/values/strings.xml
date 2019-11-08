@@ -1,4 +1,12 @@
 <resources>
-    <string name="app_name">Code Challenge</string>
+    <string name="app_name">Info Movie</string>
     <string name="movie_and_genres">%s - %s</string>
+
+    <string name="error_dialog_title">Ocorreu um erro!</string>
+    <string name="error_dialog_message">Por favor, tente novamente.</string>
+    <string name="error_dialog_close_button">Fechar</string>
+    <string name="error_dialog_try_again_button">Tentar novamente</string>
+
+    <string name="act_movie_detail_genres">Gêneros</string>
+    <string name="act_movie_detail_overview">Resumo</string>
 </resources>
